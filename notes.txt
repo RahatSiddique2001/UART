@@ -1,0 +1,14 @@
+UART2 -- alternative functions enble korte hobe to use GPIO,timer etc
+PA2 -- Tx pin hisebe use
+PA3 -- Rx -----
+
+goto code --- as we have to enable alternative function go to --- manual -- apb2 enableregister -- 0 no bit-- also GPIOA -- 2 no bit enable kore nibo 5(101) diye or kore.
+UART2 te clock -- as connected to APB1 -- APB1 enable reg -- 17 bit on
+now clear the GPIO bits
+gpio config -- gpio register -- bit 2(1011) -- bit 3(1000) --
+now uart config -- no clock so bout rate set kori
+uart baut rate reg -- 
+enable transmit & receive -- UART control reg1 -- 2 & 3 no bit -- 13 bit to enable uart
+
+ekhon data transmission code -- to check data transmitted -- Status register -- 6 no bit
+
